@@ -10,6 +10,11 @@
 *.db-shm
 *.db-wal
 
+# .NET build folders
+**/bin/
+**/obj/
+
+
 # Build results
 bin/
 obj/
@@ -74,3 +79,5 @@ API/coursestore.db-wal
 API/appsettings.Development.json
 LeaveManagementSystem/bin/Debug/net9.0/LeaveManagementSystem.dll
 LeaveManagementSystem/obj/Debug/net9.0/LeaveManagementSystem.pdb
+LeaveManagementSystem/bin/Debug/net9.0/LeaveManagementSystem.dll
+LeaveManagementSystem/bin/Debug/net9.0/LeaveManagementSystem.exe
