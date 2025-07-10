@@ -1,0 +1,74 @@
+# === ASP.NET / Visual Studio ===
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.cache
+*.log
+*.db
+*.db-shm
+*.db-wal
+
+# Build results
+bin/
+obj/
+TestResults/
+out/
+wwwroot/dist/
+
+# Others
+packages/
+*.ncrunch*
+_ReSharper*/
+*.DotSettings.user
+
+# ASP.NET secrets
+secrets.json
+
+# === Node / React ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+.env
+.env.*.local
+
+# Ignore .NET build output
+bin/
+obj/
+*.nupkg
+*.dll
+*.pdb
+*.exe
+*.cache
+*.log
+
+# Ignore NuGet
+packages/
+*.nuspec
+*.nupkg
+
+# React + Node
+node_modules/
+build/
+dist/
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === VS Code ===
+*.code-workspace
+.history/
+API/obj/Debug/net9.0/API.AssemblyInfoInputs.cache
+API/obj/Debug/net9.0/API.AssemblyInfo.cs
+API/obj/Debug/net9.0/API.GeneratedMSBuildEditorConfig.editorconfig
+API/obj/Debug/net9.0/API.GeneratedMSBuildEditorConfig.editorconfig
+API/obj/Debug/net9.0/API.csproj.AssemblyReference.cache
+API/coursestore.db-shm
+API/coursestore.db-wal
+API/appsettings.Development.json
