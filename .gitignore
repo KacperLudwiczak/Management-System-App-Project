@@ -72,3 +72,5 @@ API/obj/Debug/net9.0/API.csproj.AssemblyReference.cache
 API/coursestore.db-shm
 API/coursestore.db-wal
 API/appsettings.Development.json
+LeaveManagementSystem/bin/Debug/net9.0/LeaveManagementSystem.dll
+LeaveManagementSystem/obj/Debug/net9.0/LeaveManagementSystem.pdb
