@@ -19,7 +19,9 @@ builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
-    
+
+builder.Services.AddRazorPages();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -33,7 +35,10 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapRazorPages();
 
 app.MapStaticAssets();
 
