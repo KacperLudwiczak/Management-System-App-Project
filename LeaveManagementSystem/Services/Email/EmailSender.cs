@@ -1,6 +1,6 @@
 using System.Net.Mail;
 
-namespace LeaveManagementSystem.Services;
+namespace LeaveManagementSystem.Services.Email;
 
 public class EmailSender(IConfiguration _configuration) : IEmailSender
 {
@@ -16,7 +16,7 @@ public class EmailSender(IConfiguration _configuration) : IEmailSender
         var smtpPort = int.TryParse(_configuration["EmailSettings:Port"], out var port)
             ? port
             : throw new InvalidOperationException("EmailSettings:Port is not a valid number.");
-
+            
         var message = new MailMessage
         {
             From = new MailAddress(fromAddress),
