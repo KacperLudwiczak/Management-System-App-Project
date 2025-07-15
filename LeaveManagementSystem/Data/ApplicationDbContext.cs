@@ -8,7 +8,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
     }
-    
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -48,4 +48,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     }
 
     public DbSet<LeaveType> LeaveTypes { get; set; }
+    public DbSet<LeaveAllocation> LeaveAllocations { get; set; }
+    public DbSet<Period> Periods { get; set; }
 }
