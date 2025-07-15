@@ -1,5 +1,6 @@
 using LeaveManagementSystem.Services;
 using LeaveManagementSystem.Services.Email;
+using LeaveManagementSystem.Services.LeaveAllocations;
 using LeaveManagementSystem.Services.LeaveTypes;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
@@ -15,12 +16,13 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
             warnings.Ignore(Microsoft.EntityFrameworkCore.Diagnostics.RelationalEventId.PendingModelChangesWarning));
 });
 builder.Services.AddScoped<ILeaveTypesService, LeaveTypesService>();
+builder.Services.AddScoped<ILeaveAllocationsService, LeaveAllocationsService>();
 builder.Services.AddTransient<IEmailSender, EmailSender>();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
-
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
