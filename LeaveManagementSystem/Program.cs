@@ -1,6 +1,6 @@
-using LeaveManagementSystem.Data;
 using LeaveManagementSystem.Services;
-using Microsoft.AspNetCore.Identity;
+using LeaveManagementSystem.Services.Email;
+using LeaveManagementSystem.Services.LeaveTypes;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
