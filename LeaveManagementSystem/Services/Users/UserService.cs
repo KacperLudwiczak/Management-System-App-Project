@@ -6,11 +6,11 @@ public class UserService(UserManager<ApplicationUser> _userManager, IHttpContext
     {
         var http = _httpContextAccessor.HttpContext?.User;
         if (http == null)
-            throw new InvalidOperationException("No user context available.");
+            throw new Exception("User context is unavailable.");
 
         var user = await _userManager.GetUserAsync(http);
         if (user == null)
-            throw new InvalidOperationException("Authenticated user could not be resolved.");
+            throw new Exception("User not found.");
         return user;
     }
 
@@ -18,7 +18,7 @@ public class UserService(UserManager<ApplicationUser> _userManager, IHttpContext
     {
         var user = await _userManager.FindByIdAsync(userId);
         if (user == null)
-            throw new InvalidOperationException("Authenticated user could not be resolved.");
+            throw new Exception("User not found.");
         return user;
     }
 

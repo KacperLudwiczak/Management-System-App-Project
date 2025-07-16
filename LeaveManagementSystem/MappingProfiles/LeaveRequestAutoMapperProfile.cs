@@ -1,6 +1,5 @@
 using AutoMapper;
 using LeaveManagementSystem.Models.LeaveRequests;
-using LeaveManagementSystem.Models.LeaveTypes;
 
 namespace LeaveManagementSystem.MappingProfiles;
 
