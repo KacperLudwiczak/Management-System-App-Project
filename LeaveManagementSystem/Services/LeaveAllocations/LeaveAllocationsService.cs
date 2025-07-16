@@ -27,13 +27,13 @@ public class LeaveAllocationsService(ApplicationDbContext _context, IHttpContext
             //{
             //    continue;
             //}
-            var accuralRate = decimal.Divide(leaveType.NumberOfDays, 12);
+            var accrualRate = decimal.Divide(leaveType.NumberOfDays, 12);
             var leaveAllocation = new LeaveAllocation
             {
                 EmployeeId = employeeId,
                 LeaveTypeId = leaveType.Id,
                 PeriodId = period.Id,
-                Days = (int)Math.Ceiling(accuralRate * monthsRemaining)
+                Days = (int)Math.Ceiling(accrualRate * monthsRemaining)
             };
 
             _context.Add(leaveAllocation);
